@@ -1,0 +1,12 @@
+## Use in VSCode. Required extension : humao.rest-client
+
+## How to use: 
+## Define the variables e.g. host
+## Upload the examples if needed
+
+@host = http://hapi.fhir.org/baseR4
+@host = http://test.fhir.org/r4/
+
+
+### See if host is alive
+GET {{host}}/metadata HTTP/1.1
