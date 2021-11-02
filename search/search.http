@@ -5,8 +5,35 @@
 ## Upload the examples if needed
 
 @host = http://hapi.fhir.org/baseR4
-@host = http://test.fhir.org/r4/
+##@host = http://test.fhir.org/r4/
 
 
 ### See if host is alive
 GET {{host}}/metadata HTTP/1.1
+
+
+### GET all patients
+GET {{host}}/Patient
+
+
+### GET a specific Patient using the id
+GET {{host}}/Patient/1545788
+
+
+### GET a specific patient by SEARCHING using the ID
+GET {{host}}/Patient?_id=1545788
+
+### POST search 
+POST {{host}}/Patient/_search HTTP/1.1
+
+Content-Type: application/json
+{
+    "id": "1545788"
+}
+
+###
+
+
+
+
+
